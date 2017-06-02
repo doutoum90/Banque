@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Banque Tchad</title>
+		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" 
+		th:href="@{/css/bootstrap.min.css}"/>
+		
+		<link rel="stylesheet" type="text/css" href="../static/css/monStyle.css" 
+		th:href="@{/css/monStyle.css}"/>
+	</head>
+	<body>
+	<div class="col-md-4 col-md-offset-4">
+	<div class="panel panel-primary">
+	<div class="panel-heading">Autentification</div>
+	<div class="panel-body">
+	
+	<div th:if="${param.error}"> Identifiant ou mot de passe incorrect</div>
+	<div th:if="${param.logout}">Vous avez été bien déconnecté</div>
+	
+	<form th:action="@{/login}" method="post">
+	<div>
+	<div>
+	<label>Nom d'utilisateur: </label>
+	<input type="text" name="username" />
+	</div>
+	<div>
+	<label>Mot de passe : </label>
+	<input type="password" name="password" />
+	</div>
+	<div>
+	<button type="submit" class="btn btn-primary">se connecter</button>
+	</div>
+	</div>
+			
+	</form>
+	</div>	
+	</div>
+	
+	
+	</div>
+
+	</body>
+</html>

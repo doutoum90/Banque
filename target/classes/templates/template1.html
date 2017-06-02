@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Banque Tchad</title>
+		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" 
+		th:href="@{/css/bootstrap.min.css}"/>
+		
+		<link rel="stylesheet" type="text/css" href="../static/css/monStyle.css" 
+		th:href="@{/css/monStyle.css}"/>
+	</head>
+	<body>
+		<header>
+			<div class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<ul class="nav navbar-nav">
+						<li><a th:href="@{/index}">Index</a></li>
+						<li><a th:href="@{/operations}">operation</a></li>
+						<li><a th:href="@{/comptes}">comptes</a></li>
+						<li><a th:href="@{/clients}">client</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a th:href="@{/login?logout}">Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<section layout:fragment="content"></section>
+		<footer>
+			<div class="navbar-fixed-bottom">
+			<small>CopyRight Mahamat Annour 2018</small>
+			</div>
+		</footer>
+	</body>
+</html>
